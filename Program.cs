@@ -11,10 +11,6 @@
 //MostrarMenu
 //Crie função(ões) para otimizar o código. Incremente o que achar necessário. Utilize sua lógica e sua criatividade.
 
-Console.WriteLine($"---------------------------------------------");
-Console.WriteLine($"¦          Gerenciador de produtos          ¦");
-Console.WriteLine($"---------------------------------------------");
-
 int indexProdutos = 0;
 string[] produto = new string[10];
 float[] preco = new float[10];
@@ -45,53 +41,62 @@ void listagem()
 
 static char menu()
 {
+    Console.WriteLine($"---------------------------------------------");
+    Console.WriteLine($"¦          Gerenciador de produtos          ¦");
+    Console.WriteLine($"---------------------------------------------");
+
     Console.WriteLine(@$"
     O que deseja fazer?
     1 - Cadastrar produtos
     2 - Listar produtos
+
+    0 - Sair
     ");
     return char.Parse(Console.ReadLine());
 }
 
-switch (menu())
+do
 {
-    case '1':
-        for (int i = 0; i <=2; i++)
-        {
-            Console.WriteLine($"Insira o nome do #{i + 1} produto:");
-            produto[indexProdutos] = Console.ReadLine();
-
-            Console.WriteLine($"Insira o preço do produto:");
-            preco[indexProdutos] = float.Parse(Console.ReadLine());
-
-            Console.WriteLine($"Este produto está em promoção? Digite 's' ou 'n'.");
-            char escolhaPromo = char.Parse(Console.ReadLine());
-            if (escolhaPromo == 's')
+    switch (menu())
+    {
+        case '1':
+            for (int i = 0; i <= 2; i++)
             {
-                promocao[indexProdutos] = true;
+                Console.WriteLine($"Insira o nome do #{i + 1} produto:");
+                produto[indexProdutos] = Console.ReadLine();
+
+                Console.WriteLine($"Insira o preço do produto:");
+                preco[indexProdutos] = float.Parse(Console.ReadLine());
+
+                Console.WriteLine($"Este produto está em promoção? Digite 's' ou 'n'.");
+                char escolhaPromo = char.Parse(Console.ReadLine());
+                if (escolhaPromo == 's')
+                {
+                    promocao[indexProdutos] = true;
+                }
+                else
+                {
+                    promocao[indexProdutos] = false;
+                }
+                indexProdutos++;
+                Console.WriteLine($"Produto cadastrado!");
+                Console.WriteLine($"");
+            }
+
+            Console.WriteLine($"Deseja listar os produtos cadastrados? Digite 's' ou 'n'.");
+            char respostaCadastro = char.Parse(Console.ReadLine());
+            if (respostaCadastro == 's')
+            {
+                listagem();
             }
             else
             {
-                promocao[indexProdutos] = false;
+                Console.WriteLine($"");
             }
-            indexProdutos++;
-            Console.WriteLine($"Produto cadastrado!");
-            Console.WriteLine($"");
-        }
+            break;
 
-        Console.WriteLine($"Deseja listar os produtos cadastrados? Digite 's' ou 'n'.");
-        char respostaCadastro = char.Parse(Console.ReadLine());
-        if (respostaCadastro == 's')
-        {
+        case '2':
             listagem();
-        }
-        else
-        {
-            Console.WriteLine($"");
-        }
-        break;
-
-    case '2':
-        listagem();
-        break;
-}
+            break;
+    }
+} while (menu() != '0');

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\50579698890\\Desktop\\projeto-sistema-produtos\\projeto-sistema-produtos.csproj": {}
+    "C:\\Users\\50579698890\\Desktop\\projeto-sistema-deProdutos\\projeto-sistema-produtos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\50579698890\\Desktop\\projeto-sistema-produtos\\projeto-sistema-produtos.csproj": {
+    "C:\\Users\\50579698890\\Desktop\\projeto-sistema-deProdutos\\projeto-sistema-produtos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\50579698890\\Desktop\\projeto-sistema-produtos\\projeto-sistema-produtos.csproj",
+        "projectUniqueName": "C:\\Users\\50579698890\\Desktop\\projeto-sistema-deProdutos\\projeto-sistema-produtos.csproj",
         "projectName": "projeto-sistema-produtos",
-        "projectPath": "C:\\Users\\50579698890\\Desktop\\projeto-sistema-produtos\\projeto-sistema-produtos.csproj",
+        "projectPath": "C:\\Users\\50579698890\\Desktop\\projeto-sistema-deProdutos\\projeto-sistema-produtos.csproj",
         "packagesPath": "C:\\Users\\50579698890\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\50579698890\\Desktop\\projeto-sistema-produtos\\obj\\",
+        "outputPath": "C:\\Users\\50579698890\\Desktop\\projeto-sistema-deProdutos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\50579698890\\AppData\\Roaming\\NuGet\\NuGet.Config",
