@@ -60,7 +60,7 @@ do
     switch (menu())
     {
         case '1':
-            for (int i = 0; i <= 2; i++)
+            for (int i = 0; i <= 9; i++)
             {
                 Console.WriteLine($"Insira o nome do #{i + 1} produto:");
                 produto[indexProdutos] = Console.ReadLine();
